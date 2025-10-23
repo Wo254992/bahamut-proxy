@@ -1,4 +1,4 @@
-# 代理 TMDB API
+# 代理 TMDB API（带前缀）
 [[redirects]]
   from = "/tmdb/*"
   to = "https://api.themoviedb.org/3/:splat"
@@ -7,9 +7,9 @@
   [redirects.headers]
     Content-Type = "application/json"
 
-# 代理巴哈姆特 API
+# 代理巴哈姆特 API（默认路径，必须放在最后）
 [[redirects]]
-  from = "/bahamut/*"
+  from = "/*"
   to = "https://api.gamer.com.tw/:splat"
   status = 200
   force = true
