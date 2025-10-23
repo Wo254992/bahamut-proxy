@@ -1,5 +1,15 @@
+# 代理 TMDB API
 [[redirects]]
-  from = "/*"
+  from = "/tmdb/*"
+  to = "https://api.themoviedb.org/3/:splat"
+  status = 200
+  force = true
+  [redirects.headers]
+    Content-Type = "application/json"
+
+# 代理巴哈姆特 API
+[[redirects]]
+  from = "/bahamut/*"
   to = "https://api.gamer.com.tw/:splat"
   status = 200
   force = true
